@@ -12,7 +12,7 @@ names(pokedex) <- c("No.","Name","Abilities","HP","Att","Def","S.Att","S.Def","S
 pokedex[4:8] <- sapply(pokedex[4:8],as.numeric) #Convert character to numeric
 glimpse(pokedex)
 
-head(pokedex[order(pokedex$HP,decreasing=TRUE),],1) #Pokemon with highest HP
+head(pokedex[order(pokedex$HP,decreasing=TRUE),],5) #Pokemon with highest HP
 
 pokedex <- mutate(pokedex,Agg=rowSums(pokedex[4:9]))
-head(pokedex[order(pokedex$Agg,decreasing=TRUE),],1) #Pokemon with highest Agg
+head(pokedex[order(pokedex$Agg,decreasing=TRUE),],1) #Pokemon with highest Aggregate points
